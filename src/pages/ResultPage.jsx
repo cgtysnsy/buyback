@@ -1,12 +1,12 @@
 import React from 'react'
 
-const AboutPage = ({setLocation}) => {
+const ResultPage = ({setLocation}) => {
   return (
     <div>
-      About
+      ResultPage
       <button onClick={()=>setLocation("MainPage")}>Return To MainPage</button>
     </div>
   )
 }
 
-export default AboutPage
+export default ResultPage
