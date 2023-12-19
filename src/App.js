@@ -1,15 +1,19 @@
+import React,{useState} from "react"
 import './App.css';
+import MainPage from './pages/MainPage';
+import AboutPage from './pages/AboutPage';
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-       
-      Header
-       
-      </header>
-    </div>
-  );
+  const [location, setLocation] = useState("MainPage")
+
+
+  return (<div>
+    {location === "MainPage" && <MainPage setLocation={setLocation} />}
+    {location === "AboutPage" && <AboutPage setLocation={setLocation} />}
+     </div>)
+
 }
 
 export default App;
