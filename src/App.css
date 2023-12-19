@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+/* Header, footer, main content styles */
+.header {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+}
+
+.main {
+  padding: 1rem;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+}
+
+/* Specific layout styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
