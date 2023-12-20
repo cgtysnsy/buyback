@@ -20,10 +20,17 @@
 }
 form {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 16px;
   margin: 56px 0 24px 0;
+}
+.form-input-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
 }
 .checkbox-wrapper {
   display: flex;
@@ -36,6 +43,7 @@ form {
   flex-direction: column;
   gap: 16px;
   width: 100%;
+  justify-content: space-between;
 }
 .form-element {
   width: 100%;
@@ -163,4 +171,9 @@ input:focus {
 }
 .btn-form {
   margin: 51px 0 16px 0;
+}
+
+.error {
+  font-family: SF Pro Display;
+  color: red;
 }
