@@ -126,7 +126,17 @@ body,
   line-height: 140%;
   letter-spacing: 0.36px;
 }
-
+.text-info-grey {
+  color: #6e6e73;
+  font-family: SF Pro Display;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.text-info-grey b {
+  color: #0071e3;
+}
 .text-info-small-grey {
   color: #6e6e73;
   font-family: SF Pro Display;
@@ -235,6 +245,7 @@ body,
   font-weight: 400;
   line-height: normal;
   background-color: transparent;
+  cursor: pointer;
 }
 .btn-close {
   background-color: transparent;
@@ -251,4 +262,5 @@ body,
   margin-top: 20px;
   width: 40px;
   height: 40px;
+  cursor: pointer;
 }

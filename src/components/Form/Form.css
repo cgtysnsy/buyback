@@ -178,7 +178,12 @@ input:focus {
 .btn-form {
   margin-top: 51px;
 }
-
+.btn-form img {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  display: inline-block;
+}
 .error {
   font-family: SF Pro Display;
   color: red;

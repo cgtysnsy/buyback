@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../Form/Form.css";
 import TradeInfo from "../TradeInfo/TradeInfo";
 
@@ -13,13 +13,20 @@ const defaultFormState = {
   ibanNo: { value: "", error: null },
 };
 
-const Form = ({ setLocation, openModal }) => {
+const Form = ({ setLocation, openModal, location }) => {
   const [formState, setFormState] = useState(defaultFormState);
   const [success, setSuccess] = useState(false);
 
   const [isCheckedFirst, setIsCheckedFirst] = useState(true);
   const [isCheckedSecond, setIsCheckedSecond] = useState(true);
   const [isCheckedThird, setIsCheckedThird] = useState(true);
+
+  useEffect(() => {
+    const savedFormData = localStorage.getItem("FormState");
+    if (savedFormData) {
+      setFormState(JSON.parse(savedFormData));
+    }
+  }, [location]);
 
   const handleCheckboxChangeOne = () => {
     setIsCheckedFirst(!isCheckedFirst);
@@ -57,14 +64,19 @@ const Form = ({ setLocation, openModal }) => {
 
     if (hasErrors) {
       setSuccess(false);
-
       return;
     }
     if (!isCheckedFirst || !isCheckedSecond || !isCheckedThird) {
       return;
     }
     setSuccess(true);
-    setLocation("ResultPage");
+    localStorage.setItem("FormState", JSON.stringify({ ...formState }));
+
+    if (setSuccess) {
+      setTimeout(() => {
+        setLocation("ResultPage");
+      }, 3000);
+    }
   };
 
   const handleFormValidations = () => {
@@ -327,7 +339,11 @@ const Form = ({ setLocation, openModal }) => {
             type="submit"
             onSubmit={handleSubmit}
           >
-            Geri Alım Talebini Tamamla
+            {success ? (
+              <img src="assets/svg/loader.svg" />
+            ) : (
+              "Geri Alım Talebini Tamamla"
+            )}
           </button>
         </form>
       </div>

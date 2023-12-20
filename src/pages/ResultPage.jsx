@@ -1,12 +1,20 @@
 import React from "react";
 import ProgressBar from "../components/ProgressBar/ProgressBar";
 import Success from "../components/Success/Success";
+import Modal from "../components/Modal/Modal";
 
-const ResultPage = ({ setLocation }) => {
+const ResultPage = ({
+  setLocation,
+  modalHandler,
+  setModalHandler,
+  openModal,
+  closeModal,
+}) => {
   return (
     <>
       <Success setLocation={setLocation} />
-      <ProgressBar />
+      <ProgressBar openModal={openModal} closeModal={closeModal} />
+      <Modal closeModal={closeModal} modalHandler={modalHandler} />
     </>
   );
 };

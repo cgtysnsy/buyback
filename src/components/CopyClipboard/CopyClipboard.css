@@ -1,0 +1,12 @@
+.ref-num-text {
+  color: #0071e3;
+  font-family: SF Pro Display;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.copy-icon {
+  background-color: transparent;
+  cursor: pointer;
+}

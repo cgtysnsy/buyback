@@ -1,0 +1,45 @@
+.progress-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 25px;
+}
+.progress-wrapper header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+.next-steps-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.steps-item {
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(210, 210, 215, 0.7);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+}
+.countdown-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 64px 0 40px 0;
+  gap: 24px;
+  text-align: center;
+}
+
+.progress-btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 46px;
+}
+.btn-sec-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
