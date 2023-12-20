@@ -89,3 +89,17 @@
   margin-top: 64px;
   gap: 24px;
 }
+@media only screen and (max-width: 768px) {
+  .modal-overlay {
+    right: 30px;
+  }
+  .model-content-wrapper {
+    max-width: 360px;
+  }
+  .model-content {
+    padding: 14px 28px;
+  }
+  .btn-wrapper {
+    margin-top: 32px;
+  }
+}

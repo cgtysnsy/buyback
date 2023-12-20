@@ -47,3 +47,8 @@
   margin: 16px 0;
   align-items: center;
 }
+@media only screen and (max-width: 768px) {
+  .product img {
+    max-width: 66px;
+  }
+}

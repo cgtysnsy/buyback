@@ -92,3 +92,44 @@
 .success-wrapper .trade-wrapper {
   margin-bottom: 24px;
 }
+@media only screen and (max-width: 768px) {
+  .success-wrapper {
+    padding: unset;
+  }
+  .product-list {
+    max-width: unset;
+    justify-content: center;
+    align-items: center;
+  }
+  .success-summary {
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .success-summary-content {
+    flex-direction: column;
+    padding: 17px 10px;
+  }
+  .success-ref {
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  .ref-number-wrapper {
+    justify-content: center;
+  }
+  .success-wrapper .trade-wrapper {
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  .product-list:nth-child(2) {
+    border-left: unset;
+    border-right: unset;
+    border-top: 1px solid var(--shadow, #e3e6ec);
+    border-bottom: 1px solid var(--shadow, #e3e6ec);
+  }
+  .sum-wrapper {
+    padding: 8px;
+  }
+  .succsess-content {
+    padding: 4px 12px;
+  }
+}

@@ -189,3 +189,62 @@ input:focus {
   color: red;
   display: block;
 }
+
+@media only screen and (max-width: 1024px) {
+}
+
+@media only screen and (max-width: 768px) {
+  .form-content {
+    padding: 8px 16px 0 16px;
+  }
+  .header-content {
+    gap: 4px;
+  }
+  form {
+    gap: 8px;
+    margin: 22px 0 0 0;
+  }
+  .form-input-wrapper {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .checkbox-wrapper {
+    gap: 3px;
+  }
+  .form-column-wrapper {
+    gap: 8px;
+  }
+  .form-element {
+    padding: 4px 8px;
+    gap: 2px;
+  }
+  .form-element-info {
+    padding: 4px 8px;
+    gap: 2px;
+  }
+  .iban-content {
+    gap: 2px;
+  }
+  .checkbox-content {
+    gap: 4px;
+  }
+
+  .tooltip {
+    right: -28px;
+
+    font-size: 12px;
+  }
+  .tooltip::after {
+    right: 8%;
+  }
+
+  .btn-form {
+    margin-top: unset;
+  }
+  .btn-form img {
+    width: 10px;
+    height: 10px;
+    margin: 10px;
+    display: inline-block;
+  }
+}
