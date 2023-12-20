@@ -17,13 +17,12 @@ const Form = ({ setLocation }) => {
   const [formState, setFormState] = useState(defaultFormState);
   const [success, setSuccess] = useState(false);
 
-  const [isChecked, setIsChecked] = useState(true);
+  const [isCheckedFirst, setIsCheckedFirst] = useState(true);
   const [isCheckedSecond, setIsCheckedSecond] = useState(true);
   const [isCheckedThird, setIsCheckedThird] = useState(true);
 
-  const handleCheckboxChange = () => {
-    console.log("e");
-    setIsChecked(!isChecked);
+  const handleCheckboxChangeOne = () => {
+    setIsCheckedFirst(!isCheckedFirst);
   };
   const handleCheckboxChangeTwo = () => {
     setIsCheckedSecond(!isCheckedSecond);
@@ -59,6 +58,9 @@ const Form = ({ setLocation }) => {
     if (hasErrors) {
       setSuccess(false);
 
+      return;
+    }
+    if (!isCheckedFirst || !isCheckedSecond || !isCheckedThird) {
       return;
     }
     setSuccess(true);
@@ -256,15 +258,14 @@ const Form = ({ setLocation }) => {
             <div className="checkbox-content">
               <input
                 type="checkbox"
-                name="checkbox1"
-                id="customCheckbox"
-                checked={isChecked}
-                onChange={handleCheckboxChange}
+                id="customCheckboxFirst"
+                checked={isCheckedFirst}
+                onChange={handleCheckboxChangeOne}
               />
 
               <label
-                htmlFor="customCheckbox"
-                className={isChecked ? `labelChecked` : `labelUnChecked`}
+                htmlFor="customCheckboxFirst"
+                className={isCheckedFirst ? `labelChecked` : `labelUnChecked`}
               >
                 <a href="#" className="text-a-blue">
                   Cihaz Aydınlatma Metnini
@@ -273,18 +274,20 @@ const Form = ({ setLocation }) => {
                   okudum ve onaylıyorum.
                 </span>
               </label>
+              {/* {!isCheckedFirst && (
+                <small className="error">*Zorunlu alan</small>
+              )} */}
             </div>
             <div className="checkbox-content">
               <input
                 type="checkbox"
-                name="checkbox1"
-                id="customCheckbox"
+                id="customCheckboxSecond"
                 checked={isCheckedSecond}
                 onChange={handleCheckboxChangeTwo}
               />
 
               <label
-                htmlFor="customCheckbox"
+                htmlFor="customCheckboxSecond"
                 className={isCheckedSecond ? `labelChecked` : `labelUnChecked`}
               >
                 <a href="#" className="text-a-blue">
@@ -293,19 +296,20 @@ const Form = ({ setLocation }) => {
                 <span className="text-info-small-grey">
                   okudum ve onaylıyorum.
                 </span>
+                {/* {!isCheckedSecond && (
+                  <small className="error">*Zorunlu alan</small>
+                )} */}
               </label>
             </div>
             <div className="checkbox-content">
               <input
                 type="checkbox"
-                name="checkbox1"
-                id="customCheckbox"
+                id="customCheckboxThird"
                 checked={isCheckedThird}
                 onChange={handleCheckboxChangeThird}
               />
-
               <label
-                htmlFor="customCheckbox"
+                htmlFor="customCheckboxThird"
                 className={isCheckedThird ? `labelChecked` : `labelUnChecked`}
               >
                 <a href="#" className="text-a-blue">
@@ -314,6 +318,9 @@ const Form = ({ setLocation }) => {
                 <span className="text-info-small-grey">
                   okudum ve onaylıyorum.
                 </span>
+                {/* {!isCheckedThird && (
+                  <small className="error">*Zorunlu alan</small>
+                )} */}
               </label>
             </div>
           </div>

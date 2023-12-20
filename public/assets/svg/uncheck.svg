@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
 <g id="Checkbox/Selected">
-<rect id="Rectangle 12" x="2.16663" y="2.16669" width="15.6667" height="15.6667" rx="3.5" fill="white" stroke="#0071E3"/>
+<rect id="Rectangle 12" x="2.16663" y="2.16669" width="15.6667" height="15.6667" rx="3.5" fill="white" stroke="red"/>
 <path id="Path" fill-rule="evenodd" clip-rule="evenodd" d="M13.8458 8.74584L9.88747 12.7042C9.74581 12.8458 9.56245 12.9125 9.37078 12.9125C9.18745 12.9125 9.00413 12.8458 8.86246 12.7042L6.87913 10.7292C6.59579 10.4375 6.59579 9.97917 6.87913 9.69584C7.16246 9.4125 7.62912 9.4125 7.91245 9.69584L9.37078 11.1542L12.8125 7.7125C13.0958 7.42917 13.5625 7.42917 13.8458 7.7125C14.1291 8.00417 14.1291 8.4625 13.8458 8.74584Z" fill="white"/>
 </g>
 </svg>

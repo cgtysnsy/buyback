@@ -89,6 +89,10 @@ form {
   display: none;
 }
 
+.labelUnChecked {
+  text-decoration: underline;
+  text-decoration-color: red;
+}
 .labelChecked::before {
   content: " ";
   background-image: url("/public/assets/svg/checkbox.svg");
@@ -176,4 +180,5 @@ input:focus {
 .error {
   font-family: SF Pro Display;
   color: red;
+  display: block;
 }
