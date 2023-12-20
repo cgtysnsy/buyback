@@ -13,7 +13,7 @@ const defaultFormState = {
   ibanNo: { value: "", error: null },
 };
 
-const Form = ({ setLocation }) => {
+const Form = ({ setLocation, openModal }) => {
   const [formState, setFormState] = useState(defaultFormState);
   const [success, setSuccess] = useState(false);
 
@@ -107,9 +107,7 @@ const Form = ({ setLocation }) => {
 
   return (
     <div className="form-content-wrapper">
-      <button className="btn-back" onClick={() => setLocation("ResultPage")}>
-        {"<"}
-      </button>
+      <button className="btn-back" onClick={openModal}></button>
       <div className="form-content">
         <div className="header-content">
           <p className="heading-large-bold-black">

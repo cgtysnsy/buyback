@@ -50,6 +50,16 @@ body,
   line-height: normal;
 }
 
+.heading-cart-bold-black {
+  color: #1d1d1f;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: SF Pro Display;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
 .text-large-grey {
   color: #6e6e73;
   font-family: SF Pro Display;
@@ -58,6 +68,15 @@ body,
   font-weight: 400;
   line-height: normal;
   letter-spacing: 0.4px;
+}
+.text-medium-grey {
+  color: var(--text-light, #808191);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: SF Pro Display;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .text-small-grey {
@@ -75,6 +94,26 @@ body,
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+.text-small-black {
+  color: var(--text-active, #11142d);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: SF Pro Display;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.text-small-bold-black {
+  color: var(--text-active, #11142d);
+  text-align: right;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: SF Pro Display;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  word-wrap: break-word;
 }
 
 .text-info-medium-grey {
@@ -186,4 +225,30 @@ body,
   font-weight: 500;
   line-height: normal;
   cursor: pointer;
+}
+.btn-secondary {
+  color: #0071e3;
+  text-align: center;
+  font-family: SF Pro Display;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: transparent;
+}
+.btn-close {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn-back {
+  background-image: url("/public/assets/svg/back.svg");
+  background-size: 40px 40px;
+  border-radius: 50%;
+  display: flex;
+  align-self: flex-start;
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 40px;
+  height: 40px;
 }

@@ -4,7 +4,7 @@ import MainPage from "./pages/MainPage";
 import ResultPage from "./pages/ResultPage";
 
 function App() {
-  const [location, setLocation] = useState("MainPage");
+  const [location, setLocation] = useState("ResultPage");
 
   return (
     <main>
