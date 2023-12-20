@@ -15,11 +15,11 @@ const defaultFormState = {
 
 const Form = ({ setLocation }) => {
   const [formState, setFormState] = useState(defaultFormState);
-
+  console.log(formState);
   const [success, setSuccess] = useState(false);
 
   const [isChecked, setIsChecked] = useState(true);
-  console.log(isChecked);
+
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
   };
@@ -42,6 +42,63 @@ const Form = ({ setLocation }) => {
         error: null,
       },
     });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let hasErrors = handleFormValidations();
+    console.log("click");
+    if (hasErrors) {
+      setSuccess(false);
+      return;
+    }
+    setSuccess(true);
+  };
+
+  const handleFormValidations = () => {
+    let updatedState = { ...formState };
+    let error = false;
+
+    const { tcNo, name, lastName, birthDate, gsmNo, email, ibanInfo, ibanNo } =
+      updatedState;
+
+    const lengthOftcNo = tcNo.value?.length;
+
+    if (
+      lengthOftcNo !== 11 ||
+      tcNo[lengthOftcNo - 2] % 2 !== 0 ||
+      tcNo[lengthOftcNo - 1] % 2 !== 0
+    ) {
+      updatedState.tcNo.error = "Geçersiz TC No";
+      error = true;
+    }
+    if (name.value?.length < 3) {
+      updatedState.name.error = "İsim 3 harften kısa olamaz";
+      error = true;
+    }
+    if (!lastName?.value) {
+      updatedState.lastName.error = "lastName cannot be empty";
+      error = true;
+    }
+
+    const re =
+      /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+    if (!email?.value?.match(re)) {
+      updatedState.email.error = "Geçersiz Email Adresi";
+      error = true;
+    }
+
+    if (1900 < !birthDate?.value < 2020) {
+      updatedState.birthDate.error = "Geçersiz Yıl";
+      error = true;
+    }
+
+    setFormState({
+      ...formState,
+      ...updatedState,
+    });
+    return error;
   };
 
   return (
@@ -254,7 +311,11 @@ const Form = ({ setLocation }) => {
             </label>
           </div>
         </div>
-        <button className="btn-primary btn-form">
+        <button
+          className="btn-primary btn-form"
+          type="submit"
+          onSubmit={handleSubmit}
+        >
           Geri Alım Talebini Tamamla
         </button>
       </div>

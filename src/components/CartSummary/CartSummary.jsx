@@ -2,7 +2,6 @@ import React from "react";
 import "./CartSummary.css";
 import { products } from "../../mock/products";
 const CartSummary = () => {
-  console.log(products);
   return (
     <div>
       <header>

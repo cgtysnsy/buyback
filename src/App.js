@@ -5,7 +5,6 @@ import ResultPage from "./pages/ResultPage";
 
 function App() {
   const [location, setLocation] = useState("MainPage");
-  console.log(location);
 
   return (
     <main>
