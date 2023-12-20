@@ -21,17 +21,15 @@ const Form = ({ setLocation }) => {
   const [isCheckedSecond, setIsCheckedSecond] = useState(true);
   const [isCheckedThird, setIsCheckedThird] = useState(true);
 
-  const handleCheckboxChange = (num, value) => {
-    console.log(num, value);
-    if (num === 1) {
-      setIsChecked(!value);
-    }
-    if (num === 2) {
-      setIsCheckedSecond(!value);
-    }
-    if (num === 3) {
-      setIsCheckedThird(!value);
-    }
+  const handleCheckboxChange = () => {
+    console.log("e");
+    setIsChecked(!isChecked);
+  };
+  const handleCheckboxChangeTwo = () => {
+    setIsCheckedSecond(!isCheckedSecond);
+  };
+  const handleCheckboxChangeThird = () => {
+    setIsCheckedThird(!isCheckedThird);
   };
 
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
@@ -261,7 +259,7 @@ const Form = ({ setLocation }) => {
                 name="checkbox1"
                 id="customCheckbox"
                 checked={isChecked}
-                onChange={(e) => handleCheckboxChange(1, e.target.checked)}
+                onChange={handleCheckboxChange}
               />
 
               <label
@@ -282,7 +280,7 @@ const Form = ({ setLocation }) => {
                 name="checkbox1"
                 id="customCheckbox"
                 checked={isCheckedSecond}
-                onChange={(e) => handleCheckboxChange(2, e.target.checked)}
+                onChange={handleCheckboxChangeTwo}
               />
 
               <label
@@ -303,7 +301,7 @@ const Form = ({ setLocation }) => {
                 name="checkbox1"
                 id="customCheckbox"
                 checked={isCheckedThird}
-                onChange={(e) => handleCheckboxChange(3, e.target.checked)}
+                onChange={handleCheckboxChangeThird}
               />
 
               <label
