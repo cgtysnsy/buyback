@@ -1,11 +1,14 @@
 import React from 'react'
+import ProgressBar from '../components/ProgressBar/ProgressBar'
+import Success from '../components/Success/Success'
 
 const ResultPage = ({setLocation}) => {
   return (
-    <div>
-      ResultPage
-      <button onClick={()=>setLocation("MainPage")}>Return To MainPage</button>
-    </div>
+    <>
+      
+      <Success setLocation={ setLocation} />
+      <ProgressBar/>
+    </>
   )
 }
 

@@ -1,17 +1,16 @@
-import React from 'react'
-import Form from '../components/Form/Form'
-import Modal from '../components/Modal/Modal'
+import React from "react";
+import Form from "../components/Form/Form";
+import Modal from "../components/Modal/Modal";
+import CartSummary from "../components/CartSummary/CartSummary";
 
-const MainPage = ({setLocation}) => {
+const MainPage = ({ setLocation }) => {
   return (
-    <div>
-      
-      {/* <button onClick={() => setLocation("AboutPage")}>Go to ResultPage</button> */}
-      
-      <Form />
+    <>
+      <Form setLocation={setLocation} />
+      <CartSummary />
       {/* <Modal/> */}
-    </div>
-  )
-}
+    </>
+  );
+};
 
-export default MainPage
+export default MainPage;

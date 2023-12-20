@@ -1,0 +1,12 @@
+.product {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  border-radius: 8px;
+  border: 1px solid var(--shadow, #e3e6ec);
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
