@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Buyback
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+https://buyback-delta.vercel.app/
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+These instructions will get your copy of the project up and running on your local machine for development and testing purposes.
 
-### `npm start`
+### Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Node.js
+- npm or yarn
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Installation
 
-### `npm test`
+1. Clone the repo:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- git clone https://github.com/cgtysnsy/buyback.git
 
-### `npm run build`
+2. Install NPM packages:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- npm install
+- yarn install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Running the App
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- npm start
+- yarn start
 
-### `npm run eject`
+# Project Implementation Details
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## General Requirements
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Pixel Perfect and Responsive Design**: Implemented the design from Figma to be pixel-perfect and fully responsive.
+- **Separation of CSS and HTML**: Maintained CSS and HTML in separate files to facilitate ease of maintenance and development.
+- **Local Storage of Images**: Stored all image assets locally, ensuring no external hosting.
+- **Custom Architecture**: Built the project architecture from scratch without the use of pre-built libraries.
+- **Personal Modifications**: Incorporated personal interpretations and modifications throughout the development process.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Specific Page Implementations
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Popup Window Content (Page 28)
 
-## Learn More
+- **Content Structure**:
+  - **Title 1**: "Your process is not yet complete"
+  - **Title 2**: "Can you tell us why you didn't want to complete the process?"
+  - **Combobox with Search Feature**:
+    - Options include "Select", "I didn’t like the offer", "I received an offer from another company"
+  - **Primary Button**: "Continue"
+  - **Secondary Button**: "Exit"
+- **Behavior**: The popup window can be closed, leaving the user on the same page.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Form and Validation (Page 29)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Mandatory Fields**: Ensured that at least one textbox and checkbox must be filled in. Custom warning messages are displayed for empty fields.
+- **Hover Popup over IBAN Number Field**: Implemented a hover popup for additional information on the IBAN number field.
+- **Inline Button Loader on Button 1**: Integrated a 3-second inline button loader, activated upon clicking Button 1.
 
-### Code Splitting
+### Result Page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Copy Number Feature**: Added a feature to copy the reference number using an icon.
+- **Countdown Timer**: Implemented a countdown timer in JavaScript, resetting to 60 seconds on page transitions.
+- **Back Button**: Included a back button on the top-left corner of the page to return to the previous page while preserving data.
+- **Countdown Reset on Page Navigation**: Ensured that the countdown timer resets to 60 seconds during page navigations.
